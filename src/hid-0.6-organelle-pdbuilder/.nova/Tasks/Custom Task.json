@@ -1,0 +1,8 @@
+{
+  "actions" : {
+    "build" : {
+      "enabled" : true,
+      "script" : "scp -r . music@organellem.local:\/sdcard\/src\/hid-0.6-organelle-pdbuilder"
+    }
+  }
+}
