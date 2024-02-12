@@ -16,11 +16,11 @@ B. A way to list and select attached USB HID hardware on the Organelle, with a p
 
 ## HID
 
-HID stands for "Human Interface Device" and is a class of USB devices, like keyboards (of the typing-kind, not the musical kind), gamepads, mice and others. These can be useful for extending the functionality and complexity of Organelle patches. I think especially keyboards are interesting, because of the wide variety in the custom mechanical keyboard hardware ecosystem. This includes and is not limited to mini-keyboards, 4-key macro-keyboards, custom DIY keyboards, custom keycaps, customized switches, etc. 
+HID stands for "Human Interface Device" and is a class of USB devices, like keyboards (of the typing-kind, not the musical kind), gamepads, mice and others. These can be useful for extending the functionality and complexity of Organelle patches. I think especially keyboards are interesting, because of the wide variety or products in the custom mechanical keyboard hardware ecosystem. This includes and is not limited to mini-keyboards, 4-key macro-keyboards, custom DIY keyboards, custom keycaps, customized switches, etc. 
 
 ## `[hidsr]`
 
-In the `HIDSelectorReceiver` patch, you'll find the `[hidsr]` abstraction for Pure Data. To include it in your patch, just copy the entire contents of HIDSelectorReceiver into your patch folder. You can load `[hidsr]` into your patch just by adding it as an object into your PureData patch. There are no arguments or inlets/outlets for this object.
+In the `HIDSelectorReceiver` folder, you'll find the `[hidsr]` abstraction for Pure Data (and a subfolder of dependencies for it). To include it in your patch, just copy the entire contents of HIDSelectorReceiver into your patch folder. You can load `[hidsr]` into your patch just by adding it as an object into your PureData patch. There are no arguments or inlets/outlets for this object.
 
 * `[hidsr]` will automatically attach to your configured HID device and start sending HID events to one of the following 'receive' symbols:
 
