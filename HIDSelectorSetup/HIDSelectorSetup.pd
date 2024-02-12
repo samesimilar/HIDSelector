@@ -2,10 +2,10 @@
 #X obj 37 5 loadbang;
 #X obj 37 61 s enableSubMenu;
 #X obj 579 146 text define device-names;
-#X msg 257 213 rewind;
-#X obj 202 182 until;
-#X msg 204 212 next;
-#X msg 145 185 close;
+#X msg 277 218 rewind;
+#X obj 182 226 until;
+#X msg 184 256 next;
+#X msg 85 200 close;
 #X obj 170 30 bng 19 250 50 0 empty empty empty 0 -10 0 12 -262144
 -1 -1;
 #X obj 217 352 route unknown;
@@ -468,10 +468,13 @@ has been saved.;
 #X msg 409 673 \; resetConfig bang \; doSaveDeviceId bang \; doSaveDefaultLayer
 bang \; sendToConfigOut write \$1 \; oscOut send /led/flash 1 \; didSave
 bang \;;
+#X obj 142 186 stop_runaway 100;
+#X msg 206 153 0;
 #X connect 0 0 15 0;
 #X connect 3 0 61 0;
 #X connect 4 0 5 0;
 #X connect 5 0 61 0;
+#X connect 5 0 80 0;
 #X connect 6 0 61 0;
 #X connect 7 0 22 0;
 #X connect 8 0 14 0;
@@ -490,6 +493,7 @@ bang \;;
 #X connect 22 3 6 0;
 #X connect 22 4 4 0;
 #X connect 22 5 3 0;
+#X connect 22 5 81 0;
 #X connect 22 6 13 0;
 #X connect 22 7 23 0;
 #X connect 22 8 11 0;
@@ -527,3 +531,5 @@ bang \;;
 #X connect 75 0 77 0;
 #X connect 76 0 77 1;
 #X connect 77 0 78 0;
+#X connect 80 0 4 1;
+#X connect 81 0 80 1;
